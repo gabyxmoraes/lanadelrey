@@ -1,81 +1,15 @@
 # lanadelrey
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+# Lana Del Rey — Arquivos Cinematográficos & Discografia
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f6f8;
-  color: #1f2937;
-}
+Site temático interativo inspirado na estética clássica de Hollywood, cinema 35mm e na discografia de Lana Del Rey.
 
-header {
-  background-color: #1e293b;
-  color: #ffffff;
-  text-align: center;
-  padding: 2.5rem 1rem;
-}
+## Funcionalidades
+- **Hero Cinematográfico & Navegação Fixa:** Cenário ilustrado do pôr do sol em Hollywood com controle rápido de áudio na barra superior.
+- **Toca-Discos Interativo & 8 Eras:** Alternância entre os álbuns de estúdio com capa dinâmica, vinil giratório, tracklist clicável e sintetizador ambiente integrado via Web Audio API.
+- **Galeria Polaroid 35mm:** Cartões instantâneos inclinados com visualização ampliada em modal (Lightbox).
+- **Turnê, Máquina de Escrever & Cartão-Postal:** Ingressos vintage perfurados com aviso de pré-venda, leitor poético animado (*Violet Bent Backwards Over the Grass*) e cartão-postal aéreo interativo.
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-main {
-  max-width: 850px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.card {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-.card h2 {
-  color: #0f172a;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 0.4rem;
-}
-
-.card ul {
-  padding-left: 1.25rem;
-}
-
-.card li {
-  margin-bottom: 0.6rem;
-}
-
-.perspectivas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.perspectivas h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-  color: #334155;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.875rem;
-  color: #64748b;
-}
-
-@media (max-width: 650px) {
-  .perspectivas {
-    grid-template-columns: 1fr;
-  }
-}
+## Tecnologias Utilizadas
+- HTML5 Semântico e SVG Inline
+- CSS3 (Grid, Flexbox, Animações Keyframes e Estética Vintage)
+- JavaScript ES6+ e Web Audio API

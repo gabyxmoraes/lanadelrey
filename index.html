@@ -3,83 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luiz Inácio Lula da Silva — Perfil Histórico</title>
+  <title>Lana Del Rey — Arquivos de Hollywood & Discografia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="imagens/lula-perfil.jpg" alt="Retrato oficial de Luiz Inácio Lula da Silva" class="foto-perfil">
-    <h1>Luiz Inácio Lula da Silva</h1>
-    <p>Trajetória sindical, política e institucional no Brasil</p>
+  <!-- Navegação Fixa -->
+  <nav class="navbar">
+    <div class="nav-brand">LANA DEL REY</div>
+    <ul class="nav-links">
+      <li><a href="#discografia">Discografia</a></li>
+      <li><a href="#galeria">Polaroids 35mm</a></li>
+      <li><a href="#turne">Turnê</a></li>
+      <li><a href="#poesia">Poesia</a></li>
+      <li><a href="#postal">Cartão-Postal</a></li>
+    </ul>
+    <button id="nav-audio-btn" class="vinyl-pill" aria-label="Alternar áudio do vinil">
+      <span class="pulse-dot"></span>
+      <span id="nav-audio-label">Tocar Vinil</span>
+    </button>
+  </nav>
+
+  <!-- Hero Cinematográfico -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <svg class="hero-scene" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#191326"/>
+          <stop offset="38%" stop-color="#5a2a44"/>
+          <stop offset="72%" stop-color="#c86446"/>
+          <stop offset="100%" stop-color="#f2b872"/>
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="50%" cy="68%" r="36%">
+          <stop offset="0%" stop-color="#fff3d1" stop-opacity="0.95"/>
+          <stop offset="45%" stop-color="#f4a261" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#f4a261" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="620" fill="url(#skyGrad)"/>
+      <circle cx="720" cy="410" r="340" fill="url(#sunGlow)"/>
+      <circle cx="720" cy="410" r="105" fill="#ffe8b3" opacity="0.85"/>
+      <!-- Colinas de Hollywood -->
+      <path d="M0,470 Q260,360 540,440 T1080,410 T1440,455 L1440,620 L0,620 Z" fill="#23172b" opacity="0.75"/>
+      <path d="M0,515 Q380,435 760,500 T1440,475 L1440,620 L0,620 Z" fill="#140d1a"/>
+      <!-- Palmeiras Silhueta -->
+      <g fill="#0e0912">
+        <path d="M180,530 Q195,380 175,240 L185,240 Q207,380 192,530 Z"/>
+        <path d="M180,242 Q125,220 90,260 Q135,242 180,248 Z"/>
+        <path d="M180,242 Q130,185 85,205 Q138,208 180,244 Z"/>
+        <path d="M180,242 Q235,190 275,215 Q225,215 180,245 Z"/>
+        <path d="M180,242 Q240,235 268,275 Q222,250 180,248 Z"/>
+
+        <path d="M1240,520 Q1220,360 1248,210 L1258,210 Q1232,360 1252,520 Z"/>
+        <path d="M1252,212 Q1190,185 1150,225 Q1200,210 1252,218 Z"/>
+        <path d="M1252,212 Q1205,155 1160,175 Q1212,180 1252,214 Z"/>
+        <path d="M1252,212 Q1310,165 1355,192 Q1300,192 1252,215 Z"/>
+        <path d="M1252,212 Q1315,210 1345,250 Q1295,224 1252,218 Z"/>
+      </g>
+      <!-- Estrada e Conversível Vintage -->
+      <rect x="0" y="545" width="1440" height="75" fill="#0b070e"/>
+      <line x1="0" y1="582" x2="1440" y2="582" stroke="#d4a373" stroke-width="2" stroke-dasharray="28 24" opacity="0.45"/>
+      <g transform="translate(625, 514)">
+        <path d="M15,28 L35,14 L145,14 L172,26 L186,32 L186,44 L6,44 L6,33 Z" fill="#1a1122" stroke="#e09f67" stroke-width="1.5"/>
+        <path d="M52,14 L64,2 L115,2 L122,14" fill="none" stroke="#f2cc8f" stroke-width="1.8"/>
+        <circle cx="42" cy="44" r="12" fill="#09060c" stroke="#d4a373" stroke-width="2"/>
+        <circle cx="148" cy="44" r="12" fill="#09060c" stroke="#d4a373" stroke-width="2"/>
+        <circle cx="182" cy="34" r="3.5" fill="#ffe8b3"/>
+      </g>
+    </svg>
+
+    <div class="hero-content">
+      <p class="hero-subtitle">CALIFORNIA DREAMING • 35MM ARCHIVES</p>
+      <h1 class="hero-title">Lana Del Rey</h1>
+      <p class="hero-quote">“Melodia cinematográfica, melancolia dourada e o brilho nostálgico da Costa Oeste.”</p>
+      <div class="hero-actions">
+        <a href="#discografia" class="btn-primary">Explorar Discografia</a>
+        <a href="#galeria" class="btn-secondary">Abrir Galeria 35mm</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="card">
-      <h2>Dados Biográficos</h2>
-      <p>
-        Segundo a Biblioteca da Presidência da República, Luiz Inácio Lula da Silva nasceu em 
-        27 de outubro de 1945, em Caetés (Pernambuco). Mudou-se ainda criança para São Paulo, 
-        onde formou-se torneiro mecânico e iniciou sua atuação política no movimento sindical 
-        do ABC Paulista na década de 1970, presidindo o Sindicato dos Metalúrgicos de São 
-        Bernardo do Campo e Diadema.
-      </p>
+    <!-- Seção 1: Toca-Discos & Discografia -->
+    <section id="discografia" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">COLEÇÃO EM VINIL</span>
+        <h2>Discografia & Toca-Discos</h2>
+        <p>Selecione uma era abaixo para girar o disco, explorar as faixas e ouvir a atmosfera sonora sintetizada.</p>
+      </div>
+
+      <div class="album-tabs" id="album-tabs" role="tablist"></div>
+
+      <div class="turntable-stage">
+        <div class="vinyl-showcase">
+          <div id="album-cover" class="album-cover">
+            <div class="cover-badge" id="cover-year">2012</div>
+            <div class="cover-art-content">
+              <span class="cover-artist">LANA DEL REY</span>
+              <h3 id="cover-title">Born to Die</h3>
+              <span id="cover-motif" class="cover-motif">✦</span>
+            </div>
+          </div>
+
+          <div id="vinyl-disc" class="vinyl-disc">
+            <div class="vinyl-grooves"></div>
+            <div id="vinyl-label" class="vinyl-label">
+              <span class="label-top">INTERSCOPE • POLYDOR</span>
+              <strong id="label-title">BORN TO DIE</strong>
+              <span class="label-rpm">33 ⅓ RPM</span>
+            </div>
+            <div class="vinyl-spindle"></div>
+          </div>
+        </div>
+
+        <div class="tracklist-panel">
+          <div class="now-playing-bar">
+            <div>
+              <span class="status-tag" id="player-status">PRONTO PARA TOCAR</span>
+              <h3 id="current-album-heading">Born to Die (2012)</h3>
+              <p id="album-description" class="album-desc"></p>
+            </div>
+            <button id="main-play-btn" class="btn-play">▶ Tocar Era</button>
+          </div>
+
+          <ul id="tracklist" class="tracklist"></ul>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Registros Históricos</h2>
-      <div class="galeria">
-        <figure>
-          <img src="imagens/sindicalismo.jpg" alt="Atuação sindical no ABC Paulista" loading="lazy">
-          <figcaption>Atuação no movimento sindical do ABC Paulista na década de 1970 (Acervo Histórico).</figcaption>
-        </figure>
-        <figure>
-          <img src="imagens/posse-2003.jpg" alt="Cerimônia de posse presidencial em 2003" loading="lazy">
-          <figcaption>Posse como 35º Presidente da República em 1º de janeiro de 2003 (Foto: Agência Brasil).</figcaption>
-        </figure>
-        <figure>
-          <img src="imagens/posse-2023.jpg" alt="Cerimônia de posse presidencial em 2023" loading="lazy">
-          <figcaption>Posse como 39º Presidente da República em 1º de janeiro de 2023 (Foto: Agência Brasil).</figcaption>
-        </figure>
+    <!-- Seção 2: Galeria Polaroid & Filme 35mm -->
+    <section id="galeria" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">ARQUIVO ANALÓGICO</span>
+        <h2>Galeria Polaroid & 35mm</h2>
+        <p>Clique em qualquer instantâneo para revelar a fotografia ampliada e as anotações de rolo.</p>
+      </div>
+
+      <div class="polaroid-grid" id="polaroid-grid"></div>
+    </section>
+
+    <!-- Seção 3: Turnê & Ingressos Perfurados -->
+    <section id="turne" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">BILHETERIA VINTAGE</span>
+        <h2>Datas & Ingressos de Turnê</h2>
+        <p>Reserve um aviso antecipado para as próximas apresentações ao ar livre.</p>
+      </div>
+
+      <div class="tickets-list" id="tickets-list"></div>
+    </section>
+
+    <!-- Seção 4: Máquina de Escrever Poética -->
+    <section id="poesia" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">VIOLET BENT BACKWARDS OVER THE GRASS</span>
+        <h2>Máquina de Escrever Poética</h2>
+        <p>Versos datilografados em papel algodão sob a brisa de Los Angeles.</p>
+      </div>
+
+      <div class="typewriter-desk">
+        <div class="poem-controls">
+          <button class="poem-tab active" data-poem="0">I. Estrelas sobre Mulholland</button>
+          <button class="poem-tab" data-poem="1">II. Verão em Venice Beach</button>
+          <button class="poem-tab" data-poem="2">III. Cinema à Meia-Noite</button>
+        </div>
+        <div class="paper-sheet">
+          <div class="paper-header">
+            <span id="poem-date">LOS ANGELES, CA — ROLO #04</span>
+            <button id="retype-btn" class="btn-small">Datilografar Novamente</button>
+          </div>
+          <h3 id="poem-title" class="poem-title"></h3>
+          <p id="poem-body" class="poem-body"></p>
+        </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Trajetória Eleitoral e Mandatos</h2>
-      <ul>
-        <li><strong>1980:</strong> Participou da fundação do Partido dos Trabalhadores (PT).</li>
-        <li><strong>1986:</strong> Eleito deputado federal constituinte por São Paulo, conforme registros da Câmara dos Deputados.</li>
-        <li><strong>1989, 1994 e 1998:</strong> Concorreu à Presidência da República, ficando em segundo lugar nos três pleitos (dados do TSE).</li>
-        <li><strong>2003 – 2010:</strong> Exerceu dois mandatos consecutivos como o 35º Presidente do Brasil, após vencer as eleições de 2002 e 2006.</li>
-        <li><strong>2017 – 2021:</strong> Foi condenado e preso no âmbito da Operação Lava Jato; em 2021, o Supremo Tribunal Federal (STF) anulou as condenações por incompetência territorial da 13ª Vara Federal de Curitiba, restabelecendo seus direitos políticos.</li>
-        <li><strong>2023 – Presente:</strong> Assumiu como o 39º Presidente do Brasil após vencer a eleição presidencial de 2022, segundo o TSE.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Avaliações e Perspectivas Políticas</h2>
-      <div class="perspectivas">
-        <div>
-          <h3>Argumentos de Apoiadores</h3>
-          <p>
-            Analistas e aliados destacam a expansão de programas de transferência de renda (como o Bolsa Família), 
-            a ampliação do acesso ao ensino superior, políticas de valorização do salário mínimo e a redução 
-            dos índices de pobreza e desmatamento durante suas gestões.
-          </p>
-        </div>
-        <div>
-          <h3>Argumentos de Críticos</h3>
-          <p>
-            Opositores e críticos apontam o aumento dos gastos públicos e debates sobre responsabilidade fiscal, 
-            além dos escândalos de corrupção investigados durante os governos de seu partido, como o Mensalão 
-            e os casos apurados na Operação Lava Jato.
-          </p>
-        </div>
+    <!-- Seção 5: Cartão-Postal Vintage -->
+    <section id="postal" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">CORREIO AÉREO • HOLLYWOOD</span>
+        <h2>Envie um Cartão-Postal</h2>
+        <p>Deixe uma mensagem para o fã-clube ou compartilhe sua faixa favorita da discografia.</p>
       </div>
+
+      <form id="postcard-form" class="postcard">
+        <div class="postcard-left">
+          <label for="sender-message">Sua Mensagem</label>
+          <textarea id="sender-message" rows="5" placeholder="Escreva aqui como em uma tarde de verão na Califórnia..." required></textarea>
+        </div>
+        <div class="postcard-divider"></div>
+        <div class="postcard-right">
+          <div class="stamp-box">
+            <div class="stamp">
+              <span>PAR AVION</span>
+              <strong>HOLLYWOOD</strong>
+              <small>35¢ USA</small>
+            </div>
+            <div class="postmark">LOS ANGELES<br>NOV 2026</div>
+          </div>
+          <input type="text" id="sender-name" placeholder="Seu nome" required>
+          <input type="text" id="sender-city" placeholder="Sua cidade / estado" required>
+          <button type="submit" class="btn-primary full-width">Carimbar e Enviar</button>
+        </div>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>Fontes: Tribunal Superior Eleitoral (TSE), Biblioteca da Presidência da República, Supremo Tribunal Federal (STF) e Agência Brasil.</p>
+    <p>Arquivo Visual & Sonoro — Tributo Estético à Discografia de Lana Del Rey.</p>
   </footer>
+
+  <!-- Modal Lightbox para Polaroids -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-card">
+      <button id="close-lightbox" class="close-btn" aria-label="Fechar">✕</button>
+      <div id="lightbox-art" class="lightbox-art"></div>
+      <div class="lightbox-info">
+        <span id="lightbox-film" class="section-tag"></span>
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificação Flutuante (Toast) -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
